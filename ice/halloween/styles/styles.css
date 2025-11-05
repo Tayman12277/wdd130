@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #333;
+    font-family: creepster, arial, sans-serif;
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #1a1a1a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+nav ul li {
+    color: #ff6600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li:hover {
+    color: purple;
+    font-style: italic;
+
+}
+
+main {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row; 
+    padding: 20px;
+    align-items: flex-start;
+}
+
+main h1 {
+    width: 100%;
+    text-align: center;
+    order: 1;
+    color: #ff6600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Creepster', cursive; 
+    font-size: 3.5em; 
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    order: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+main section {
+    flex: 1 1 300px;
+    min-width: 250px;
+
+    background-color: #fff8e1;
+    border: 1px solid #ff6600;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    order: 3;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+main section h2 {
+    color: #ff6600;
+    border-bottom: 2px dashed #ff6600;
+    margin-top: 0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+main section p {
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    font-size: 0.8em;
+    color: #777;
+    order: 99;
+}

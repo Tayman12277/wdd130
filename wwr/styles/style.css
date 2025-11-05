@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --primary-color: black;
+    --primary-color-opacity: #92b37b55;
+    --secondary-color: #dac3a4;
+    --background-color: #4d5647;
+    --heading-font: Montserrat, Times, serif;
+    --paragraph-font: Lato, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+nav a{
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+#hero-msg h1{
+    text-align: center;
+   font-family: var(--heading-font);
+   color: rgb(236, 124, 124);
+}
+#hero-msg h4{
+    font-size: 1.2em;
+}
+h4{
+    color: black;
+}
+#hero{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top:-100px;
+}
+#hero-box{
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+#hero-img{
+    width: 100%;
+}
+#hero-msg{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 100px;
+    color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--heading-font);
+}
+header{
+    background-color: var(--primary-color-opacity);
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-box{
+    text-align: center;
+
+}
+.card-img {
+    width: 100%;
+}
+.mountains{
+    width: 100%;
+    grid-area: 5/2/8/7;
+    box-shadow:  5px 10px #4d5647;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+main section{
+    text-align: center;
+}
+
+main section img {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white; 
+    color: black;
+    font-family: Lato, Arial, sans-serif;
+    font-size: 22px;
+    margin: 0%;
+    padding: 0%;
+}
+nav a:hover {
+    background-color: #006400;
+    opacity: .4;
+    color: white;
+}
+
+.msg h2{
+color: var(--background-color);
+}
+
+h2{
+    margin: 0%;
+}
+#logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+.book, 
+.join{
+  background-color: var(--secondary-color);
+    color: var(--primary-color);               
+    text-decoration: none;        
+    font-size: 1.2em;              
+    padding: 15px 30px;           
+    margin-top: 50px;             
+    border-radius: 5px; 
+}
+
+.book:hover, .join:hover{
+  background-color: #dac3a4; 
+  color: black;
+  text-decoration: underline;
+}
+
+.msg{
+    background-color: white;
+    font-size: .8em;
+    padding: 35px;
+    line-height: 1.5em;
+    grid-area: 6/6/7/10;
+    box-shadow: 5px 5px 10px #6f7364;
+
+}
+
+footer{
+    background-color: #6f7364;
+    color: black;
+     padding: 25px 50px;
+     margin-top: 200px;
+     display: flex;
+     align-self: center;
+     justify-content: space-around;
+     align-items: center;
+}
+footer .social img {
+    padding-top: 15px;
+}
+
+.logo{
+    width: 80px;
+    padding-top: 10px;
+}
+
+footer a:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}    
+
+footer a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+footer h3 a:hover{
+    text-decoration: underline;
+}
+     
+.subheading {
+    color: var(--secondary-color);
+   font-size: 2em;
+  margin-top: 10px; 
+  font-family: var(--heading-font);
+  text-align: center;
+}
+.home-title {
+    color: var(--secondary-color);
+   font-size: 2em;
+  margin-top: 10px; 
+  font-family: var(--heading-font);
+  text-align: center;
+}
+
+.msg p{
+    font-size: 0.8em;
+    padding-bottom: 15px;
+    color: var(--background-color);
+    
+
+}
+#logo_link{
+    justify-content: center;
+    align-self: center;
+
+}
+.icon{
+    padding-top: 10px;
+    width: 80px;
+}
+
+.home-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.rapids-card{
+    margin: 200px 0;
+    grid-area: 2/8/3/10;
+    
+}
+
+.camping-card {
+    margin: 200px 0;
+    grid-area: 2/5/3/7;
+}
+
+.rivers-card{
+    margin: 200px 0;
+    grid-area: 2/2/3/4;
+}
+
+
+.card-img{
+    border: 10px solid #d9c2a3;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+    width: 100%;
+}
+.card-img:hover {
+    opacity: .4;
+    transform: scale(1.1);
+}
+
+#background {
+  height: 725px;
+  background-color: var(--secondary-color);
+  grid-area: 4/1/9/11;
+}
+
+@media screen and (max-width: 900px) {
+   
+    #hero, 
+    .home-grid {
+        display: block;
+        height: auto;
+    }
+    header{
+        background-color: var(--primary-color);
+    }
+    nav,
+    footer {
+        flex-direction: column;
+    }
+
+    nav a{
+        display: block;
+        padding: 15px;
+        text-align: right;
+
+    }
+    #hero{
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg .subheading {
+        display: none;
+    }
+    .home-title  {
+        font-size: 25px;
+        color: var(--primary-color);
+    }
+    .rivers-card,
+    .camping-card,
+    .rapids-card {
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains,
+    .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+    
+}

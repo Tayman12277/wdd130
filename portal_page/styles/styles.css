@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark-bg: #1c1c1c;
+    --light-bg: #292929;
+    --text-color: #f0f0f0;
+    --accent-color-pink: #ff69b4;
+    --font-family: 'Raleway', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+#page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#class-schedule {
+  text-align: center;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.contact-section button[type="submit"] {
+    background-color: var(--accent-color-pink);
+    color: var(--dark-bg);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+}
+
+.contact-section button[type="submit"]:hover {
+    background-color: #e652a2;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); 
+}
+
+.course-info {
+    font-weight: 300;
+    font-size: 0.85em;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-nav-horizontal ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.main-nav-horizontal a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.main-nav-horizontal .active {
+    background-color: var(--accent-color-pink);
+    color: var(--dark-bg);
+    font-weight: 700;
+}
+
+.main-nav-horizontal a:hover:not(.active) {
+    background-color: #383838;
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 40px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #b0b0b0;
+    max-width: 450px;
+}
+
+.hero-image img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #383838;
+    padding-bottom: 10px;
+}
+
+.milestone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.milestone-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.milestone-item.completed p:first-child::before {
+    content: '✓';
+    color: var(--accent-color-pink);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.table-data {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.aboutme-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.schedule-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 2px solid #333;
+    padding: 12px 16px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+}
+
+.schedule-table thead th {
+    background-color: #ff69b4; 
+    color: #1c1c1c;
+}
+
+/* link to ice challenges and everything else
+
+

@@ -1,0 +1,11 @@
+<aside class="side-nav-container">
+            <nav class="side-nav-vertical">
+                <ul>
+                    <li><a href="#home">Home <span class="arrow-icon">➔</span></a></li>
+                    <li><a href="#wwr">WWR <span class="arrow-icon">➔</span></a></li>
+                    <li><a href="#ice-1">ICE</a></li>
+                    <li><a href="#ice-2">ICE</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                </ul>
+            </nav>
+        </aside>
