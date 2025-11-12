@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(120, 96, 64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#formContainer {
+    background-color: white;
+    border: 10px solid navy;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 450px;
+    height: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    z-index: 2;
+}
+
+#headerImg {
+    position: relative;
+}
+
+#headerImg img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.headerText {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#myForm label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#myForm input[type="text"],
+#myForm input[type="password"],
+#myForm input[type="email"] {
+    flex: 1;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.gender-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.gender-group label:first-child {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.gender-group label:not(:first-child) {
+    font-weight: normal;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+button[type="submit"] {
+    margin: 15px auto 0 auto;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 3px 10px;
+    width: auto;
+    cursor: pointer;
+    display: block;
+}
+
+button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+
+#scriptureBooks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+#scriptureBooks img {
+    width: 95%;
+    height: 100px;
+    object-fit: cover;
+    border-top: 1px solid #ddd;
+    margin: 0 2px;
+}
+
+.form-row {
+      display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px; /* space between rows */
+}
+
+.form-row label {
+  width: 120px; /* keeps all labels aligned */
+}
+
+.form-row input {
+  flex: 1;
+}
+
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+  <button type="button" id="closeBtn">X</button>
+
+  <div id="headerImg">
+    <img src="images/jesus_feeds_5000.jpeg" alt="Jesus teaching a crowd">
+    <div class="headerText">
+      <h2>Daily Feed</h2>
+      <p>Scripture a Day</p>
+    </div>
+  </div>
+
+   <form id="myForm">
+    <h3>Sign Up for Daily Scripture Feed</h3>
+
+    <div class="form-row">
+        <label for="username">User Name:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-row gender-row">
+        <label for="male">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+
+    <div id="output">
+    <div class="checkbox-group"> <label><input type="checkbox" name="newsletter"> Subscribe to newsletter</label> <label><input type="checkbox" name="terms"> I acknowledge the terms and conditions</label> </div>
+        </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+  <footer id="scriptureBooks">
+    <img src="images/old_testament.webp" alt="Old Testament">
+    <img src="images/new_testament.webp" alt="New Testament">
+    <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+    <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+    <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+  </footer>
+</div>
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
