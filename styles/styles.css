@@ -38,14 +38,19 @@ h1, h2 {
 
 #main-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
     padding: 20px 0;
     border-bottom: 1px solid #333;
+    position: static; 
+}
+
+.header-title {
+    margin: 0 auto 0 375px;
 }
 
 .logo img {
-    height: 40px;
+    height: 40px; 
     width: auto;
 }
 
@@ -78,12 +83,6 @@ h1, h2 {
     transform: translateX(-50%);
 }
 
-.main-nav-horizontal ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
 .main-nav-horizontal a {
     text-decoration: none;
     color: var(--text-color);
@@ -102,6 +101,11 @@ h1, h2 {
 
 .main-nav-horizontal a:hover:not(.active) {
     background-color: #383838;
+}
+
+.main-nav-horizontal {
+    display: flex;
+    gap: 15px; 
 }
 
 
@@ -229,6 +233,68 @@ h1, h2 {
     color: #1c1c1c;
 }
 
-/* link to ice challenges and everything else
+.ice-card {
+    display: block;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    overflow: hidden; 
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ice-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+}
+.card-image-wrapper {
+    position: relative; 
+    height: 100%;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.card-image-wrapper img {
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8; 
+    transition: opacity 0.3s;
+    overflow: hidden; 
+}
+
+.card-overlay-text {
+    position: absolute; 
+    bottom: 15%; 
+    left: 30%;
+    
+    padding: 15px 20px; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.3em; 
+    text-align: center;
+    border-radius: 8px; 
+    max-width: 80%; 
+    
+    border: 2px solid var(--accent-color-pink);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+}
+
+.card-image-wrapper img {
+    opacity: 0.7; 
+    transition: opacity 0.3s;
+    height: 400px;
+}
+
+.ice-card:hover .card-image-wrapper img {
+    opacity: 0.5; 
+}
+
+.ice-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+}
 
 
